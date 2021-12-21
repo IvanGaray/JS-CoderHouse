@@ -10,7 +10,10 @@ let descripcion;
 const miObjeto={};
 let unArray=[];
 var temp;
-
+let objDesordenado=[
+    {nombre:"Carlos",edad:31},{nombre:"Ernesto",edad:15},{nombre:"Joaquin",edad:70},{nombre:"Anabella",edad:30}
+]
+console.log(objDesordenado)
 function multiplicar(a, b) {
     return a * b;
 }
@@ -114,4 +117,18 @@ for (i = 0; i < unArray.length; i++) {
   document.getElementsByClassName('elArray')[0].appendChild(temp);
 }
 
+}
+
+
+function ordenarObjeto(){
+    
+    objDesordenado.sort((a,b)=>{
+        if(a.edad<b.edad){
+        return -1 ;
+    }else if(a.edad>b.edad){return 0}
+        })
+
+
+        console.log(objDesordenado)
+        
 }
